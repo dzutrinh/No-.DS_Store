@@ -1,0 +1,23 @@
+pc=fpc	# can be Turbo Pascal or TMT Pascal or Free Pascal
+
+all: nods.exe
+
+nods.exe: nods.pas
+	@$(pc) nods.pas
+
+	@rem for cleaning up TMT Pascal intermediate files
+	@if exist nods.sym del nods.sym
+	@if exist nods.fpd del nods.fpd
+
+	@rem for cleaning up Free Pascal intermediate files
+	@if exist nods.o del nods.o
+
+clean:
+	@if exist nods.exe del nods.exe
+
+	@rem for cleaning up TMT Pascal intermediate files if
+	@if exist nods.sym del nods.sym
+	@if exist nods.fpd del nods.fpd
+
+	@rem for cleaning up Free Pascal intermediate files
+	@if exist nods.o del nods.o

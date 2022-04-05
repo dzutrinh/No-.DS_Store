@@ -1,2 +1,2 @@
 # No .DS_Store
- .DS_Store cleaner for MS-DOS drives
+Small utility for removing the annoying .DS_Store from MS-DOS drives :)
